@@ -1,9 +1,8 @@
 """
-Date: 18 january 2021
-Author: Sanam kandar
-Project: Student library management system
-"""
-
+Date: 16 june 2023
+Author: Mohit,Nirakar
+Project: library management system
+""
 
 class Library:
     def __init__(self, listofBooks):
@@ -46,7 +45,6 @@ class Student():
         if {name: self.book} in track:
             track.remove({name: self.book})
         return self.book
-
     def donateBook(self):
         print("Okay! you want to doante book!")
         self.book = input("Enter name of the book you want to donate: ")
@@ -55,7 +53,7 @@ class Student():
 
 if __name__ == "__main__":
 
-    Delhilibrary = Library(
+      k.vlibrary = Library(
         ["vistas", "invention", "rich&poor", "indian", "macroeconomics", "microeconomics"])
     student = Student()
     track = []
@@ -69,14 +67,14 @@ if __name__ == "__main__":
             usr_response = int(input("Enter your choice: "))
 
             if usr_response == 1:  # listing
-                Delhilibrary.displayAvailableBooks()
+                  k.vlibrary.displayAvailableBooks()
             elif usr_response == 2:  # borrow
-                Delhilibrary.borrowBook(
+                  k.vlibrary.borrowBook(
                     input("Enter your name: "), student.requestBook())
             elif usr_response == 3:  # return
-                Delhilibrary.returnBook(student.returnBook())
+                  k.vlibrary.returnBook(student.returnBook())
             elif usr_response == 4:  # donate
-                Delhilibrary.donateBook(student.donateBook())
+                k.vlibrary.donateBook(student.donateBook())
             elif usr_response == 5:  # track
                 for i in track:
                     for key, value in i.items():
